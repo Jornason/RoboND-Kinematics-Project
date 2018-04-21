@@ -38,7 +38,7 @@ theta = arm joint angle
 
 Standard Homogenous Transformation matrix from frame i-1 to frame i using DH Parameters:
 
-$T_{i-1}^{i}=\begin{bmatrix}cos(\theta_{i})&-sin(\theta_{i})&0&a_{i-1} \\ sin(\theta_{i})cos(\alpha_{i-1})&cos(\theta_{i})cos(\alpha_{i-1})&-sin(\alpha_{i-1})& sin(\alpha_{i-1})d_{i} \\ sin(\theta_{i})sin(\alpha_{i-1})&cos(\theta_{i})sin(\alpha_{i-1})&cos(\alpha_{i-1})&cos(\alpha_{i-1})d_{i} \\ 0&0&0&1 \\  \end{bmatrix}$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/gif.latex?T_%7Bi-1%7D%5E%7Bi%7D%3D%5Cbegin%7Bbmatrix%7Dcos%28%5Ctheta_%7Bi%7D%29%26-sin%28%5Ctheta_%7Bi%7D%29%260%26a_%7Bi-1%7D%20%5C%5C%20sin%28%5Ctheta_%7Bi%7D%29cos%28%5Calpha_%7Bi-1%7D%29%26cos%28%5Ctheta_%7Bi%7D%29cos%28%5Calpha_%7Bi-1%7D%29%26-sin%28%5Calpha_%7Bi-1%7D%29%26%20sin%28%5Calpha_%7Bi-1%7D%29d_%7Bi%7D%20%5C%5C%20sin%28%5Ctheta_%7Bi%7D%29sin%28%5Calpha_%7Bi-1%7D%29%26cos%28%5Ctheta_%7Bi%7D%29sin%28%5Calpha_%7Bi-1%7D%29%26cos%28%5Calpha_%7Bi-1%7D%29%26cos%28%5Calpha_%7Bi-1%7D%29d_%7Bi%7D%20%5C%5C%200%260%260%261%20%5C%5C%20%5Cend%7Bbmatrix%7D)
 
 
 
@@ -46,14 +46,15 @@ we get the following transformation matrices about each joint with respect to th
 
 
 
-$T_{0}^{1}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/gif.latex?T_%7B0%7D%5E%7B1%7D%3D)
+
 | cos(q1) | -sin(q1) | 0    | 0    |
 | ------- | -------- | ---- | ---- |
 | sin(q1) | cos(q1)  | 0    | 0    |
 | 0       | 0        | 1    | 0.75 |
 | 0       | 0        |      | 1    |
 
-$T_{1}^{2}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B1%7D%5E%7B2%7D%3D)
 
 | sin(q2) | cos(q2)  | 0    | 0.35 |
 | ------- | -------- | ---- | ---- |
@@ -61,7 +62,8 @@ $T_{1}^{2}=$
 | cos(q2) | -sin(q2) | 0    | 0    |
 | 0       | 0        | 0    | 1    |
 
-$T_{2}^{3}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B2%7D%5E%7B3%7D%3D)
+
 | cos(q3) | -sin(q3) | 0    | 1.25 |
 | ------- | -------- | ---- | ---- |
 | sin(q3) | cos(q3)  | 0    | 0    |
@@ -69,7 +71,8 @@ $T_{2}^{3}=$
 | 0       | 0        | 0    | 1    |
 
 
-$T_{3}^{4}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B3%7D%5E%7B4%7D%3D)
+
 | cos(q4)  | -sin(q4) | 0    | -0.054 |
 | -------- | -------- | ---- | ------ |
 | 0        | 0        | 1    | 1.5    |
@@ -77,7 +80,8 @@ $T_{3}^{4}=$
 | 0        | 0        | 0    | 1      |
 
 
-$T_{4}^{5}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B4%7D%5E%7B5%7D%3D)
+
 | cos(q5) | -sin(q5) | 0    | 0    |
 | ------- | -------- | ---- | ---- |
 | 0       | 0        | -1   | 0    |
@@ -85,7 +89,8 @@ $T_{4}^{5}=$
 | 0       | 0        | 0    | 1    |
 
 
-$T_{5}^{6}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B5%7D%5E%7B6%7D%3D)
+
 | cos(q6)  | -sin(q6) | 0    | 0    |
 | -------- | -------- | ---- | ---- |
 | 0        | 0        | 1    | 0    |
@@ -93,7 +98,8 @@ $T_{5}^{6}=$
 | 0        | 0        | 0    | 1    |
 
 
-$T_{6}^{G}=$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B6%7D%5E%7BG%7D%3D)
+
 | 1    | 0    | 0    | 0     |
 | ---- | ---- | ---- | ----- |
 | 0    | 1    | 0    | 0     |
@@ -102,7 +108,7 @@ $T_{6}^{G}=$
 
 Generalized homogeneous transform:
 
-$T_{0}^{G}= T_0^1 \cdot  T_1^2 \cdot T_2^3 \cdot  T_3^4 \cdot  T_4^5 \cdot  T_5^6 \cdot  T_6^G$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?T_%7B0%7D%5E%7BG%7D%3D%20T_0%5E1%20%5Ccdot%20T_1%5E2%20%5Ccdot%20T_2%5E3%20%5Ccdot%20T_3%5E4%20%5Ccdot%20T_4%5E5%20%5Ccdot%20T_5%5E6%20%5Ccdot%20T_6%5EG)
 
 
 
@@ -118,7 +124,9 @@ And here's where you can draw out and show your math for the derivation of your 
 
 ROLL
 
-$ROT_x = \begin{bmatrix} 1 &  0 &  0 \\ 0 &  cos(r) &  -sin(r) \\ 0 &  sin(r) &  cos(r) \\ \end{bmatrix}$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?ROT_x%20%3D%20%5Cbegin%7Bbmatrix%7D%201%20%26%200%20%26%200%20%5C%5C%200%20%26%20cos%28r%29%20%26%20-sin%28r%29%20%5C%5C%200%20%26%20sin%28r%29%20%26%20cos%28r%29%20%5C%5C%20%5Cend%7Bbmatrix%7D)
+
+
 
 
 
@@ -126,17 +134,17 @@ $ROT_x = \begin{bmatrix} 1 &  0 &  0 \\ 0 &  cos(r) &  -sin(r) \\ 0 &  sin(r) & 
 
 PITCH  
 
-$ROT_y = \begin{bmatrix} ( cos(p) &  0 &  sin(p) \\ 0 & 1 & 0 \\  -sin(p) &  0 &  cos(p) \\ \end{bmatrix}$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?ROT_y%20%3D%20%5Cbegin%7Bbmatrix%7D%20%28%20cos%28p%29%20%26%200%20%26%20sin%28p%29%20%5C%5C%200%20%26%201%20%26%200%20%5C%5C%20-sin%28p%29%20%26%200%20%26%20cos%28p%29%20%5C%5C%20%5Cend%7Bbmatrix%7D)
 
 
 
 YAW
 
-$ROT_z = \begin{bmatrix}(cos(y) & -sin(y) & 0 \\ sin(y) & cos(y) & 0 \\ 0 & 0 & 1 \\  \end{bmatrix}$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?ROT_z%20%3D%20%5Cbegin%7Bbmatrix%7D%28cos%28y%29%20%26%20-sin%28y%29%20%26%200%20%5C%5C%20sin%28y%29%20%26%20cos%28y%29%20%26%200%20%5C%5C%200%20%26%200%20%26%201%20%5C%5C%20%5Cend%7Bbmatrix%7D)
 
 
 
-$ROT_{EE} = ROT_z \cdot ROT_y  \cdot ROT_x $
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?ROT_%7BEE%7D%20%3D%20ROT_z%20%5Ccdot%20ROT_y%20%5Ccdot%20ROT_x)
 
 
 
@@ -156,11 +164,13 @@ EE = Matrix([[px], [py], [pz]])
 WC = EE - (0.303) * ROT_EE[:,2]
 ```
 
-$\theta_1=atan2(WC_y,WC_x)$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?%5Ctheta_1%3Datan2%28WC_y%2CWC_x%29)
 
-${\theta_2}={\pi\over2} - A - [atan2(W \cdot C_z - 0.75, \sqrt{(W \cdot C_x^2 + W \cdot C_y^2 - 0.35})]$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?%7B%5Ctheta_2%7D%3D%7B%5Cpi%5Cover2%7D%20-%20A%20-%20%5Batan2%28W%20%5Ccdot%20C_z%20-%200.75%2C%20%5Csqrt%7B%28W%20%5Ccdot%20C_x%5E2%20+%20W%20%5Ccdot%20C_y%5E2%20-%200.35%7D%29%5D)
 
-$\theta_3 = {\pi\over 2} - [B + 0.036]$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?%5Ctheta_3%20%3D%20%7B%5Cpi%5Cover%202%7D%20-%20%5BB%20+%200.036%5D)
+
+
 
 
 
@@ -172,7 +182,7 @@ side_b = sqrt(pow(sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35, 2)+ pow((WC[2] - 0
 
 Inverse Orientation problems
 
-$R^0_6 = R^0_1 \cdot R^1_2 \cdot R^2_3 \cdot R^3_4 \cdot R^4_5 \cdot R^5_6$
+![This is the rendered form of the equation. You can not edit this directly. Right click will give you the option to save the image, and in most browsers you can drag the image onto your desktop or another program.](https://latex.codecogs.com/png.latex?R%5E0_6%20%3D%20R%5E0_1%20%5Ccdot%20R%5E1_2%20%5Ccdot%20R%5E2_3%20%5Ccdot%20R%5E3_4%20%5Ccdot%20R%5E4_5%20%5Ccdot%20R%5E5_6)
 
 Since the overall RPY (Roll Pitch Yaw) rotation between base_link and gripper_link must be equal to the product of individual rotations between respective links, following holds true:
 
