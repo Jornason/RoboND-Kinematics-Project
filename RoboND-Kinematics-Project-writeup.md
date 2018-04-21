@@ -36,7 +36,7 @@ theta = arm joint angle
 
 Standard Homogenous Transformation matrix from frame i-1 to frame i using DH Parameters:
 
-$$T_{i-1}^{i}=\begin{bmatrix}cos(\theta_{i})&-sin(\theta_{i})&0&a_{i-1} \\ sin(\theta_{i})cos(\alpha_{i-1})&cos(\theta_{i})cos(\alpha_{i-1})&-sin(\alpha_{i-1})& sin(\alpha_{i-1})d_{i} \\ sin(\theta_{i})sin(\alpha_{i-1})&cos(\theta_{i})sin(\alpha_{i-1})&cos(\alpha_{i-1})&cos(\alpha_{i-1})d_{i} \\ 0&0&0&1 \\  \end{bmatrix}$$
+$T_{i-1}^{i}=\begin{bmatrix}cos(\theta_{i})&-sin(\theta_{i})&0&a_{i-1} \\ sin(\theta_{i})cos(\alpha_{i-1})&cos(\theta_{i})cos(\alpha_{i-1})&-sin(\alpha_{i-1})& sin(\alpha_{i-1})d_{i} \\ sin(\theta_{i})sin(\alpha_{i-1})&cos(\theta_{i})sin(\alpha_{i-1})&cos(\alpha_{i-1})&cos(\alpha_{i-1})d_{i} \\ 0&0&0&1 \\  \end{bmatrix}$
 
 
 
@@ -44,14 +44,14 @@ we get the following transformation matrices about each joint with respect to th
 
 
 
-$$T_{0}^{1}=$$
+$T_{0}^{1}=$
 | cos(q1) | -sin(q1) | 0    | 0    |
 | ------- | -------- | ---- | ---- |
 | sin(q1) | cos(q1)  | 0    | 0    |
 | 0       | 0        | 1    | 0.75 |
 | 0       | 0        |      | 1    |
 
-$$T_{1}^{2}=$$
+$T_{1}^{2}=$
 
 | sin(q2) | cos(q2)  | 0    | 0.35 |
 | ------- | -------- | ---- | ---- |
@@ -59,7 +59,7 @@ $$T_{1}^{2}=$$
 | cos(q2) | -sin(q2) | 0    | 0    |
 | 0       | 0        | 0    | 1    |
 
-$$T_{2}^{3}=$$
+$T_{2}^{3}=$
 | cos(q3) | -sin(q3) | 0    | 1.25 |
 | ------- | -------- | ---- | ---- |
 | sin(q3) | cos(q3)  | 0    | 0    |
@@ -67,7 +67,7 @@ $$T_{2}^{3}=$$
 | 0       | 0        | 0    | 1    |
 
 
-$$T_{3}^{4}=$$
+$T_{3}^{4}=$
 | cos(q4)  | -sin(q4) | 0    | -0.054 |
 | -------- | -------- | ---- | ------ |
 | 0        | 0        | 1    | 1.5    |
@@ -75,7 +75,7 @@ $$T_{3}^{4}=$$
 | 0        | 0        | 0    | 1      |
 
 
-$$T_{4}^{5}=$$
+$T_{4}^{5}=$
 | cos(q5) | -sin(q5) | 0    | 0    |
 | ------- | -------- | ---- | ---- |
 | 0       | 0        | -1   | 0    |
@@ -83,7 +83,7 @@ $$T_{4}^{5}=$$
 | 0       | 0        | 0    | 1    |
 
 
-$$T_{5}^{6}=$$
+$T_{5}^{6}=$
 | cos(q6)  | -sin(q6) | 0    | 0    |
 | -------- | -------- | ---- | ---- |
 | 0        | 0        | 1    | 0    |
@@ -91,7 +91,7 @@ $$T_{5}^{6}=$$
 | 0        | 0        | 0    | 1    |
 
 
-$$T_{6}^{G}=$$
+$T_{6}^{G}=$
 | 1    | 0    | 0    | 0     |
 | ---- | ---- | ---- | ----- |
 | 0    | 1    | 0    | 0     |
@@ -100,7 +100,7 @@ $$T_{6}^{G}=$$
 
 Generalized homogeneous transform:
 
-$$T_{0}^{G}= T_0^1 \cdot  T_1^2 \cdot T_2^3 \cdot  T_3^4 \cdot  T_4^5 \cdot  T_5^6 \cdot  T_6^G$$
+$T_{0}^{G}= T_0^1 \cdot  T_1^2 \cdot T_2^3 \cdot  T_3^4 \cdot  T_4^5 \cdot  T_5^6 \cdot  T_6^G$
 
 
 
@@ -116,7 +116,7 @@ And here's where you can draw out and show your math for the derivation of your 
 
 ROLL
 
-$$ROT_x = \begin{bmatrix} 1 &  0 &  0 \\ 0 &  cos(r) &  -sin(r) \\ 0 &  sin(r) &  cos(r) \\ \end{bmatrix}$$
+$ROT_x = \begin{bmatrix} 1 &  0 &  0 \\ 0 &  cos(r) &  -sin(r) \\ 0 &  sin(r) &  cos(r) \\ \end{bmatrix}$
 
 
 
@@ -124,17 +124,17 @@ $$ROT_x = \begin{bmatrix} 1 &  0 &  0 \\ 0 &  cos(r) &  -sin(r) \\ 0 &  sin(r) &
 
 PITCH  
 
-$$ROT_y = \begin{bmatrix} ( cos(p) &  0 &  sin(p) \\ 0 & 1 & 0 \\  -sin(p) &  0 &  cos(p) \\ \end{bmatrix}$$
+$ROT_y = \begin{bmatrix} ( cos(p) &  0 &  sin(p) \\ 0 & 1 & 0 \\  -sin(p) &  0 &  cos(p) \\ \end{bmatrix}$
 
 
 
 YAW
 
-$$ROT_z = \begin{bmatrix}(cos(y) & -sin(y) & 0 \\ sin(y) & cos(y) & 0 \\ 0 & 0 & 1 \\  \end{bmatrix}$$
+$ROT_z = \begin{bmatrix}(cos(y) & -sin(y) & 0 \\ sin(y) & cos(y) & 0 \\ 0 & 0 & 1 \\  \end{bmatrix}$
 
 
 
-$$ROT_{EE} = ROT_z \cdot ROT_y  \cdot ROT_x $$
+$ROT_{EE} = ROT_z \cdot ROT_y  \cdot ROT_x $
 
 
 
@@ -154,11 +154,11 @@ EE = Matrix([[px], [py], [pz]])
 WC = EE - (0.303) * ROT_EE[:,2]
 ```
 
-$$\theta_1=atan2(WC_y,WC_x)$$
+$\theta_1=atan2(WC_y,WC_x)$
 
-$${\theta_2}={\pi\over2} - A - [atan2(W \cdot C_z - 0.75, \sqrt{(W \cdot C_x^2 + W \cdot C_y^2 - 0.35})]$$
+${\theta_2}={\pi\over2} - A - [atan2(W \cdot C_z - 0.75, \sqrt{(W \cdot C_x^2 + W \cdot C_y^2 - 0.35})]$
 
-$$\theta_3 = {\pi\over 2} - [B + 0.036]$$
+$\theta_3 = {\pi\over 2} - [B + 0.036]$
 
 
 
@@ -170,7 +170,7 @@ side_b = sqrt(pow(sqrt(WC[0] * WC[0] + WC[1] * WC[1]) - 0.35, 2)+ pow((WC[2] - 0
 
 Inverse Orientation problems
 
-$$R^0_6 = R^0_1 \cdot R^1_2 \cdot R^2_3 \cdot R^3_4 \cdot R^4_5 \cdot R^5_6$$
+$R^0_6 = R^0_1 \cdot R^1_2 \cdot R^2_3 \cdot R^3_4 \cdot R^4_5 \cdot R^5_6$
 
 Since the overall RPY (Roll Pitch Yaw) rotation between base_link and gripper_link must be equal to the product of individual rotations between respective links, following holds true:
 
